@@ -16,8 +16,7 @@
     <nav>
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Bolsistas Cadastrados</a></li>
-            <li><a href="">Elterar Cadastro</a></li>
+            <li><a href="">Alterar Cadastro</a></li>
             <li><a href="">Excluir Cadastrado</a></li>
             <li><a href="">Registrar Ponto</a></li>
             <li><a href="">Acompanhar Progresso</a></li>
