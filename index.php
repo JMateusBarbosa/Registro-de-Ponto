@@ -1,6 +1,6 @@
 <?php 
 
-    define('INCLUDE_PATH','/estrutura_mvc/');
+    define('INCLUDE_PATH','/registro_de_ponto/');
     
     $autoload = function($class){
         if(file_exists($class.'.php')){
