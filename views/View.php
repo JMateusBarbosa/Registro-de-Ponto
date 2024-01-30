@@ -3,7 +3,7 @@
 
 	class View{
 
-		const DEFAULT = 'bolsistas.php';
+		const DEFAULT = 'alterarBolsista.php';
 		const DEFAULT_FOOTER = 'footer.php';
 		
 		public function render($body,$header = null,$footer = null){
