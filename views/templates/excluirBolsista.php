@@ -41,7 +41,7 @@ $bolsistas = $excluirModel->listarBolsistas();
         <form class="form-excluir" method="post">
             <label for="bolsista">Selecione o Bolsista:</label>
             <select id="bolsista" name="bolsista" required>
-                <!-- Popule este campo com os bolsistas cadastrados no sistema -->
+                <!-- bolsistas cadastrados no sistema -->
                 <?php foreach ($bolsistas as $value) : ?>
                     <option value="<?php echo $value['id']; ?>"><?php echo $value['nome']; ?></option>
                 <?php endforeach; ?>

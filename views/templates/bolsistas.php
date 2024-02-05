@@ -1,4 +1,3 @@
-<!-- Views/templates/bolsistas.php -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
