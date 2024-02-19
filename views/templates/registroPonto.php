@@ -1,4 +1,3 @@
-
 <?php
     use models\RegistroPontoModel;
     $listarModel = new RegistroPontoModel();
@@ -33,7 +32,7 @@
     <section>
         <!-- Formulário de Registro de Ponto aqui -->
         <form class="form-registro" method="post">
-        <label for="bolsista">Selecione o Bolsista:</label>
+            <label for="bolsista">Selecione o Bolsista:</label>
             <select id="bolsista" name="bolsista" required>
                 <?php foreach ($bolsistas as $value) : ?>
                     <option value="<?php echo $value['id']; ?>" data-nome="<?php echo $value['nome']; ?>">
@@ -43,15 +42,13 @@
             </select>
 
             <label for="horario_entrada">Horário de Entrada:</label>
-            <input type="datetime-local" id="horario_entrada" name="horario_entrada" required>
+            <input type="time" id="horario_entrada" name="horario_entrada" required>
 
             <label for="horario_saida">Horário de Saída:</label>
-            <input type="datetime-local" id="horario_saida" name="horario_saida" required>
+            <input type="time" id="horario_saida" name="horario_saida" required>
 
-            <!-- Movido para dentro do loop -->
-            <?php foreach ($bolsistas as $value) : ?>
-                <input type="hidden" name="nome_bolsista" value="<?php echo $value['nome']; ?>">
-            <?php endforeach; ?>
+            <!-- Adicione este campo hidden para enviar o nome do bolsista -->
+            <input type="hidden" name="nome_bolsista">
 
             <button type="submit" name="bt-registrar">Registrar Ponto</button>
         </form>
@@ -61,25 +58,44 @@
                 $nomeBolsista = $_POST['nome_bolsista'];
                 $horarioEntrada = $_POST['horario_entrada'];
                 $horarioSaida = $_POST['horario_saida'];
+
+                // Obtendo a data atual no formato 'Y-m-d'
+                $dataAtual = date('Y-m-d');
+
+                
             
                 $registroModel = new RegistroPontoModel();
                 $registroModel->registrarPonto($bolsistaId, $nomeBolsista, $horarioEntrada, $horarioSaida);
             }
-            ?>
+        ?>
 
-            <script>
-                    document.getElementById('bolsista').addEventListener('change', function () {
-                    var selectedOption = this.options[this.selectedIndex];
-                    var nomeBolsista = selectedOption.getAttribute('data-nome');
-                    
-                    // Atualizando todos os campos ocultos com o mesmo nome
-                    var camposNomeBolsista = document.getElementsByName('nome_bolsista');
-                    for (var i = 0; i < camposNomeBolsista.length; i++) {
-                        camposNomeBolsista[i].value = nomeBolsista;
-                    }
-                });
-            </script>
+        <script>
+            document.getElementById('bolsista').addEventListener('change', function () {
+                var selectedOption = this.options[this.selectedIndex];
+                var nomeBolsista = selectedOption.getAttribute('data-nome');
+
+                // Atualizando o campo oculto com o mesmo nome
+                document.getElementsByName('nome_bolsista')[0].value = nomeBolsista;
+            });
+
+            document.querySelector('.form-registro').addEventListener('submit', function (event) {
+                var horarioEntrada = document.getElementById('horario_entrada').value;
+                var horarioSaida = document.getElementById('horario_saida').value;
+
+                // Convertendo os horários para objetos Date para comparação
+                var entradaDate = new Date('2000-01-01 ' + horarioEntrada);
+                var saidaDate = new Date('2000-01-01 ' + horarioSaida);
+
+                // Verificando se o horário de saída é maior que o de entrada
+                if (entradaDate >= saidaDate) {
+                    alert('O horário de saída deve ser maior que o de entrada.');
+                    event.preventDefault(); // Impede o envio do formulário se a validação falhar
+                }
+            });
+        </script>
+
     </section>
+
 
     <footer>
         <p>&copy; 2024 Sistema de Ponto</p>
