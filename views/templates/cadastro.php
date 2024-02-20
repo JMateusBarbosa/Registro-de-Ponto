@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="views/assets/css/telaCadastro.css">
 
     <title>Cadastro de Bolsistas</title>
 </head>
-<body>
+<body class="tela-cadastro">
     <header>
         <h1>Cadastro de Bolsistas</h1>
     </header>

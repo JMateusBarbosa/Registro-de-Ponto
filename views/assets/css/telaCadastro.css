@@ -1,0 +1,171 @@
+/* Views/assets/css/telaCadastro.css */
+
+body.tela-cadastro {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.tela-cadastro header,
+body.tela-cadastro nav,
+body.tela-cadastro section,
+body.tela-cadastro footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.tela-cadastro header {
+    text-align: center;
+    background-color: #388e3c;
+    color: #fff;
+    padding: 10px 0;
+}
+
+body.tela-cadastro nav {
+    background-color: #388e3c;
+    padding: 10px;
+    text-align: center;
+}
+
+body.tela-cadastro nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centralize os itens do menu */
+}
+
+body.tela-cadastro nav ul li {
+    margin-right: 10px;
+}
+
+body.tela-cadastro nav ul li:last-child {
+    margin-right: 0;
+}
+
+body.tela-cadastro nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #207026;
+    display: block;
+}
+
+body.tela-cadastro nav ul li a:hover {
+    background-color: #1b5e20;
+}
+
+body.tela-cadastro section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.tela-cadastro form {
+    max-width: 400px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin: 0 auto;
+}
+
+body.tela-cadastro form label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+body.tela-cadastro form .label-input {
+    margin-bottom: 15px;
+}
+
+body.tela-cadastro form input,
+body.tela-cadastro form select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+body.tela-cadastro form button {
+    background-color: #207026;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, height 0.3s ease;
+    height: 40px;
+}
+
+body.tela-cadastro form button:hover {
+    background-color: #1b5e20;
+    height: 36px;
+}
+
+body.tela-cadastro footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+/* Views/assets/css/telaCadastro.css */
+
+body.tela-cadastro form .div-submit-reset {
+    display: flex;
+    justify-content: space-between; /* Distribui os botões igualmente com espaçamento entre eles */
+    margin-top: 20px; /* Adiciona espaço acima dos botões */
+}
+
+body.tela-cadastro form .submit-reset {
+    flex: 1; /* Faz os botões ocuparem a mesma largura e flexibiliza o espaço entre eles */
+}
+
+body.tela-cadastro form .bt-submit,
+body.tela-cadastro form .bt-reset {
+    width: 100%; /* Largura total dos botões */
+    padding: 12px; /* Altura dos botões */
+    box-sizing: border-box;
+    background-color: #207026;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+body.tela-cadastro form .bt-reset {
+    margin-left: 10px; /* Adiciona espaço entre os botões */
+}
+
+body.tela-cadastro form .bt-submit:hover,
+body.tela-cadastro form .bt-reset:hover {
+    background-color: #1b5e20;
+    height: 36px;
+}
+
+
+@media (max-width: 768px) {
+    body.tela-cadastro nav ul {
+        flex-direction: column;
+        align-items: center; /* Centralize os itens do menu em telas menores */
+    }
+
+    body.tela-cadastro nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    body.tela-cadastro section {
+        padding: 20px;
+        align-items: center;
+    }
+
+    body.tela-cadastro form input,
+    body.tela-cadastro form select {
+        padding: 10px;
+    }
+}

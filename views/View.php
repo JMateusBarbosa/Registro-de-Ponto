@@ -3,7 +3,7 @@
 
 	class View{
 
-		const DEFAULT = 'progresso.php';
+		const DEFAULT = 'cadastro.php';
 		const DEFAULT_FOOTER = 'footer.php';
 		
 		public function render($body,$header = null,$footer = null){
