@@ -1,7 +1,5 @@
-
-
-
-body.tela-progresso {
+/* Tela exclusão de bolsista */
+body.tela-excluir {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,55 +7,30 @@ body.tela-progresso {
     flex-direction: column;
     min-height: 100vh;
 }
-table {
-    border-collapse: collapse;
-    width: 50%; /* Define a largura da tabela para 80% da largura disponível */
-    margin-top: 20px; /* Adiciona espaço entre o menu e a tabela */
-    margin-bottom: 20px; /* Adiciona espaço abaixo da tabela */
-    margin-left: auto; /* Centraliza a tabela à esquerda */
-    margin-right: auto; /* Centraliza a tabela à direita */
-    
-}
-table, th, td {
-    border: 1px solid black;
-    
-}
-th,td {
-    text-align: center; /* Centraliza o texto nas células */
-    padding: 8px;
-}
-th {
-    background-color: #4CAF50;
-    color: rgb(255, 255, 255);
-    padding: 8px;
-    
-}
 
-td {
-    padding: 8px;
-}
-body.tela-progresso header,
-body.tela-progresso nav,
-body.tela-progresso section,
-body.tela-progresso footer {
+body.tela-excluir header,
+body.tela-excluir nav,
+body.tela-excluir section,
+body.tela-excluir footer {
     width: 100%;
     box-sizing: border-box;
 }
-body.tela-progresso header {
+
+body.tela-excluir header {
     text-align: center;
     background-color: #388e3c;
     color: #fff;
     padding: 10px 0;
 }
 
-body.tela-progresso nav {
+body.tela-excluir nav {
     background-color: #388e3c;
     padding: 10px;
     text-align: center;
     width: 100%; /* Ocupa toda a largura disponível */
 }
 
-body.tela-progresso nav ul {
+body.tela-excluir nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -65,13 +38,15 @@ body.tela-progresso nav ul {
     justify-content: center; /* Centralize os itens do menu */
 }
 
-body.tela-progresso nav ul li {
+body.tela-excluir nav ul li {
     margin-right: 10px;
 }
-body.tela-progresso nav ul li:last-child {
+
+body.tela-excluir nav ul li:last-child {
     margin-right: 0;
 }
-body.tela-progresso nav ul li a {
+
+body.tela-excluir nav ul li a {
     text-decoration: none;
     color: #fff;
     display: flex;
@@ -80,62 +55,47 @@ body.tela-progresso nav ul li a {
     padding: 10px;
     border-radius: 3px;
     background-color: #207026;
-    width: 150px; /* Define uma largura fixa para os botões */
-    height: 60px; /* Define uma altura fixa para os botões */
+    width: 150px; 
+    height: 60px; 
     text-align: center; /* Centraliza o texto dentro dos botões */
     box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
+    transition: background-color 0.3s ease;
 }
 
-body.tela-progresso nav ul li a:hover {
+body.tela-excluir nav ul li a:hover {
     background-color: #1b5e20;
 }
 
-body.tela-progresso section {
-    
+body.tela-excluir section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Ocupa a altura total da tela */
 }
 
-body.tela-progresso footer {
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 10px 0;
-    margin-top: auto;
+body.tela-excluir form {
+    max-width: 400px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin: 0 auto;
+    margin-top: 20px; /* Adiciona espaço acima do formulário */
 }
 
-body.tela-progresso form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    
-}
-body.tela-progresso form select {
-    width: 100%;
-    max-width: 250px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-body.tela-progresso form label {
+body.tela-excluir form label {
     display: block;
     margin-bottom: 8px;
-    text-align: center;
+    text-align: left;
 }
 
-body.tela-progresso form input,
-body.tela-progresso form select {
+body.tela-excluir form select {
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do select */
 }
 
-body.tela-progresso form button {
-    width: 20%;
-    max-width: 150px;
+body.tela-excluir form button {
+    width: 50%; /* Largura total do botão */
     padding: 12px;
     box-sizing: border-box;
     background-color: #207026;
@@ -144,16 +104,25 @@ body.tela-progresso form button {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease, height 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-body.tela-progresso form button:hover {
+body.tela-excluir form button:hover {
     background-color: #1b5e20;
 }
 
+body.tela-excluir footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    margin-top: auto;
+}
 
 @media (max-width: 768px) {
-    body.tela-progresso header,
-    body.tela-progresso nav {
+    body.tela-excluir header,
+    body.tela-excluir nav {
         width: 100%;
         text-align: center;
         background-color: #388e3c;
@@ -161,7 +130,7 @@ body.tela-progresso form button:hover {
         padding: 10px 0;
     }
 
-    body.tela-progresso nav ul {
+    body.tela-excluir nav ul {
         flex-direction: column;
         align-items: center;
         list-style: none;
@@ -169,12 +138,12 @@ body.tela-progresso form button:hover {
         margin: 0;
     }
 
-    body.tela-progresso nav ul li {
+    body.tela-excluir nav ul li {
         margin-right: 0;
         margin-bottom: 5px;
     }
 
-    body.tela-progresso nav ul li a {
+    body.tela-excluir nav ul li a {
         text-decoration: none;
         color: #fff;
         padding: 10px;
@@ -187,7 +156,7 @@ body.tela-progresso form button:hover {
         box-sizing: border-box;
     }
 
-    body.tela-progresso form {
+    body.tela-excluir form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -196,7 +165,7 @@ body.tela-progresso form button:hover {
         
     }
 
-    body.tela-progresso form select {
+    body.tela-excluir form select {
         width: 100%;
         max-width: 250px;
         margin-bottom: 10px;
@@ -204,7 +173,7 @@ body.tela-progresso form button:hover {
         box-sizing: border-box;
     }
 
-    body.tela-progresso form button {
+    body.tela-excluir form button {
         width: 35%;
         max-width: 250px;
         padding: 12px;
@@ -217,20 +186,14 @@ body.tela-progresso form button:hover {
         transition: background-color 0.3s ease, height 0.3s ease;
     }
 
-    body.tela-progresso form button:hover {
+    body.tela-excluir form button:hover {
         background-color: #1b5e20;
     }
 
-    body.tela-progresso footer {
+    body.tela-excluir footer {
         text-align: center;
         background-color: #f0f0f0;
         padding: 10px 0;
         margin-top: auto;
     }
-    body.tela-progresso p {
-        text-align: center;
-        padding: 10px 0;
-        margin-top: auto;
-    }
 }
-

@@ -16,18 +16,18 @@ $bolsistas = $excluirModel->listarBolsistas();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="views/assets/css/telaExcluir.css">
 
     <title>Excluir Cadastro</title>
 </head>
-<body>
+<body class="tela-excluir">
     <header>
         <h1>Excluir Cadastro</h1>
     </header>
-
+    <section>
     <nav>
         <ul>
-            <li><a href="?route=home">Home</a></li>
+            <li><a href="?route=home.php">Home</a></li>
             <li><a href="?route=cadastro">Cadastro de Bolsistas</a></li>
             <li><a href="?route=bolsistas">Bolsistas Cadastrados</a></li>
             <li><a href="?route=alterar">Alterar Cadastro</a></li>
@@ -36,7 +36,7 @@ $bolsistas = $excluirModel->listarBolsistas();
         </ul>
     </nav>
 
-    <section>
+    
         <!-- Conteúdo da Formulário de Exclusão de Cadastro aqui -->
         <form class="form-excluir" method="post">
             <label for="bolsista">Selecione o Bolsista:</label>

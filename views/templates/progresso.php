@@ -20,7 +20,7 @@ if (isset($_POST['bolsista'])) {
 
     <title>Acompanhar Progresso</title>
 </head>
-<body>
+<body class="tela-progresso">
     <header>
         <h1>Acompanhar Progresso</h1>
     </header>
