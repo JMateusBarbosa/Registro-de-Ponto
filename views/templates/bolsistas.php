@@ -9,10 +9,11 @@
 
     <title>Bolsistas Cadastrados</title>
 </head>
-<body>
+<body class="tela-bolsista">
     <header>
         <h1>Bolsistas Cadastrados</h1>
     </header>
+    <section>
 
     <nav>
         <ul>
@@ -53,7 +54,10 @@
             }
             ?>
     </table>
-    <footer>
+
+
+    </section>
+        <footer>
         <p>&copy; 2024 Sistema de Ponto</p>
     </footer>
 </body>

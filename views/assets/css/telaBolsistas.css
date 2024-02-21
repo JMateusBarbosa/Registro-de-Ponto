@@ -1,82 +1,153 @@
 /* Tela bolsistas*/
-
+body.tela-bolsista {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 50%; /* Define a largura da tabela para 80% da largura disponível */
+    margin-top: 20px; /* Adiciona espaço entre o menu e a tabela */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da tabela */
+    margin-left: auto; /* Centraliza a tabela à esquerda */
+    margin-right: auto; /* Centraliza a tabela à direita */
+    
 }
 
 table, th, td {
     border: 1px solid black;
+    
 }
-
+th,
+td {
+    text-align: center; /* Centraliza o texto nas células */
+    padding: 8px;
+}
 th {
-    background-color: #4CAF50; 
-    color: white;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    
 }
 
 td {
     padding: 8px;
 }
 
-ody {
-    font-family: 'Arial', sans-serif;
-    font-size: 23px;
-    margin: 0;
-    padding: 0;
+body.tela-bolsista header,
+body.tela-bolsista nav,
+body.tela-bolsista section,
+body.tela-bolsista footer {
+    width: 100%;
+    box-sizing: border-box;
 }
 
-header {
+body.tela-bolsista header {
     text-align: center;
-    background-color:  #388e3c; 
-    color: #fff; 
+    background-color: #388e3c;
+    color: #fff;
     padding: 10px 0;
 }
 
-header h1 {
-    margin: 0;
-}
-
-nav {
-    background-color:  #388e3c; 
-    border-radius: 5px;
+body.tela-bolsista nav {
+    background-color: #388e3c;
     padding: 10px;
-    margin: 10px 0;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
-nav ul {
+body.tela-bolsista nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Centralize os itens do menu */
 }
-
-nav ul li {
-    display: inline;
+body.tela-bolsista nav ul li {
     margin-right: 10px;
+} 
+body.tela-bolsista nav ul li:last-child {
+    margin-right: 0;
 }
-
-nav ul li a {
+body.tela-bolsista nav ul li a {
     text-decoration: none;
     color: #fff;
-    padding: 8px 12px; 
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 10px;
     border-radius: 3px;
-    background-color:  #207026; 
-    transition: background-color 0.3s ease; 
-
+    background-color: #207026;
+    width: 150px; /* Define uma largura fixa para os botões */
+    height: 60px; /* Define uma altura fixa para os botões */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+    box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
 }
-
-nav ul li a:hover {
-    background-color: #1b5e20; 
+body.tela-bolsista nav ul li a:hover {
+    background-color: #1b5e20;
 }
-
-section {
-    padding: 20px;
+body.tela-bolsista section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-footer {
+body.tela-bolsista footer {
     text-align: center;
     background-color: #f0f0f0;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
+}
+
+/* Adiciona estilos para telas menores que 768px de largura */
+@media (max-width: 768px) {
+    table {
+        border-collapse: collapse;
+        width: 10%; /* Define a largura da tabela para 80% da largura disponível */
+        margin-top: 20px; /* Adiciona espaço entre o menu e a tabela */
+        margin-bottom: 20px; /* Adiciona espaço abaixo da tabela */
+        margin-left: auto; /* Centraliza a tabela à esquerda */
+        margin-right: auto; /* Centraliza a tabela à direita */
+        
+    }
+    body.tela-bolsista header {
+        text-align: center;
+        background-color: #388e3c;
+        color: #fff;
+        padding: 10px 0;
+       
+    }
+    body.tela-bolsista nav {
+        
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+    body.tela-bolsista nav ul {
+        flex-direction: column;
+        align-items: center; /* Centralize os itens do menu em telas menores */
+        
+    }
+    
+    body.tela-bolsista nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    
+    body.tela-bolsista section {    
+        align-items: center;
+    }
+    body.tela-bolsista nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        background-color: #207026;
+        display: block;
+        width: 250px; /* Define uma largura fixa para os botões */
+        height: 40px; /* Define uma altura fixa para os botões */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+        box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
+    }
 }

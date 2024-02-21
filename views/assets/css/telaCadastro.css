@@ -46,13 +46,21 @@ body.tela-cadastro nav ul li:last-child {
     margin-right: 0;
 }
 
+
+
 body.tela-cadastro nav ul li a {
     text-decoration: none;
     color: #fff;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
     padding: 10px;
     border-radius: 3px;
     background-color: #207026;
-    display: block;
+    width: 150px; /* Define uma largura fixa para os botões */
+    height: 60px; /* Define uma altura fixa para os botões */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+    box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
 }
 
 body.tela-cadastro nav ul li a:hover {
@@ -111,9 +119,6 @@ body.tela-cadastro footer {
     margin-top: auto;
 }
 
-
-/* Views/assets/css/telaCadastro.css */
-
 body.tela-cadastro form .div-submit-reset {
     display: flex;
     justify-content: space-between; /* Distribui os botões igualmente com espaçamento entre eles */
@@ -149,18 +154,41 @@ body.tela-cadastro form .bt-reset:hover {
 
 
 @media (max-width: 768px) {
+
+    body.tela-cadastro header {
+        text-align: center;
+        background-color: #388e3c;
+        color: #fff;
+        padding: 10px 0;
+       
+    }
+    body.tela-cadastro nav {
+    
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
     body.tela-cadastro nav ul {
         flex-direction: column;
         align-items: center; /* Centralize os itens do menu em telas menores */
+        
     }
 
     body.tela-cadastro nav ul li {
         margin-right: 0;
         margin-bottom: 5px;
     }
-
-    body.tela-cadastro section {
-        padding: 20px;
+    body.tela-cadastro nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        background-color: #207026;
+        display: block;
+        width: 250px; /* Define uma largura fixa para os botões */
+        height: 40px; /* Define uma altura fixa para os botões */
+        text-align: center; /* Centraliza o texto dentro dos botões */
+        box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
+    }
+    body.tela-cadastro section {    
         align-items: center;
     }
 
@@ -169,3 +197,10 @@ body.tela-cadastro form .bt-reset:hover {
         padding: 10px;
     }
 }
+
+
+
+
+
+
+
