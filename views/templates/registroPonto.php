@@ -9,11 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="views/assets/css/telaRegistroPonto.css">
     <script src="views/assets/js/script.js"></script>
     <title>Registrar Ponto</title>
 </head>
-<body>
+<body class="tela-registroPonto">
     <header>
         <h1>Registrar Ponto</h1>
     </header>

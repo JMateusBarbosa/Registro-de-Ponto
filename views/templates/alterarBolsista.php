@@ -9,10 +9,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="views/assets/css/telaAlterarBolsista.css">
     <title>Alterar Cadastro</title>
 </head>
-<body>
+<body class="tela-alterarBolsista" >
     <header>
         <h1>Alterar Cadastro</h1>
     </header>
@@ -46,7 +46,7 @@
                 $selectedBolsista = $alterarModel->getBolsistaById($selectedBolsistaId);
         ?>
 
-        <form method="post">
+        <form method="post" class="alterar-form">
             <input type="hidden" name="bolsistaId" value="<?php echo $selectedBolsista['id']; ?>">
             <p>
                 <label for="novo_nome">Novo Nome:</label>

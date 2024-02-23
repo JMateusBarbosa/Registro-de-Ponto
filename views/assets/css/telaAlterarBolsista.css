@@ -1,0 +1,285 @@
+/* Tela Alterar Bolsista */
+body.tela-alterarBolsista {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.tela-alterarBolsista header,
+body.tela-alterarBolsista nav,
+body.tela-alterarBolsista section,
+body.tela-alterarBolsista footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.tela-alterarBolsista header {
+    text-align: center;
+    background-color: #388e3c;
+    color: #fff;
+    padding: 10px 0;
+}
+
+body.tela-alterarBolsista nav {
+    background-color: #388e3c;
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+body.tela-alterarBolsista nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centralize os itens do menu */
+}
+
+body.tela-alterarBolsista nav ul li {
+    margin-right: 10px;
+}
+
+body.tela-alterarBolsista nav ul li:last-child {
+    margin-right: 0;
+}
+
+body.tela-alterarBolsista nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #207026;
+    width: 150px; /* Define uma largura fixa para os botões */
+    height: 60px; /* Define uma altura fixa para os botões */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+    box-sizing: border-box; /* Inclui a padding e borda na largura do botão */
+    transition: background-color 0.3s ease;
+}
+
+body.tela-alterarBolsista nav ul li a:hover {
+    background-color: #1b5e20;
+}
+
+body.tela-alterarBolsista section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+body.tela-alterarBolsista form {
+    max-width: 400px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+body.tela-alterarBolsista form:first-child {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do primeiro formulário */
+    background-color: #fdfdfd; /* Cor de fundo para o primeiro formulário */
+}
+
+
+
+body.tela-alterarBolsista form label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #fff;
+}
+
+body.tela-alterarBolsista form select,
+body.tela-alterarBolsista form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do select e input de texto */
+}
+
+body.tela-alterarBolsista form button {
+    width: 50%; /* Largura total do botão */
+    max-width: 250px;
+    margin: 0 auto; /* Adiciona margem automática nas laterais para centralizar horizontalmente */
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #207026;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.tela-alterarBolsista form button:hover {
+    background-color: #1b5e20;
+}
+
+body.tela-alterarBolsista footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+
+
+/* Estilos específicos para o formulário com a classe 'alterar-form' */
+body.tela-alterarBolsista form.alterar-form {
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #37c240, #049b11);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.tela-alterarBolsista form.alterar-form p {
+    margin-bottom: 15px;
+}
+
+body.tela-alterarBolsista form.alterar-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+body.tela-alterarBolsista form.alterar-form input,
+body.tela-alterarBolsista form.alterar-form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+body.tela-alterarBolsista form.alterar-form button {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #207026;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.tela-alterarBolsista form.alterar-form button:hover {
+    background-color: #e0f7fa;
+    color: #1b5e20;
+}
+
+
+/* Responsividade para telas menores que 768px */
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    body.tela-alterarBolsista header,
+    body.tela-alterarBolsista nav,
+    body.tela-alterarBolsista footer {
+        width: 100%;
+        box-sizing: border-box; /* Inclui padding e borda na largura total */
+        text-align: center;
+        background-color: #388e3c;
+        color: #fff;
+        padding: 10px 0;
+    }
+
+    body.tela-alterarBolsista nav ul {
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    body.tela-alterarBolsista nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    body.tela-alterarBolsista nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        background-color: #207026;
+        display: block;
+        width: 250px;
+        height: 40px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    body.tela-alterarBolsista nav ul li a:hover {
+        background-color: #1b5e20;
+    }
+
+    body.tela-alterarBolsista section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+
+    body.tela-alterarBolsista form {
+        max-width: 70%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    body.tela-alterarBolsista form label {
+        text-align: left;
+        color: black;
+    }
+
+    body.tela-alterarBolsista form select,
+    body.tela-alterarBolsista form input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    body.tela-alterarBolsista form button {
+        width: 60%;
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 12px;
+        box-sizing: border-box;
+        background-color: #207026;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    body.tela-alterarBolsista form button:hover {
+        background-color: #1b5e20;
+    }
+
+    body.tela-alterarBolsista footer {
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+        margin-top: auto;
+    }
+}
