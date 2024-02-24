@@ -12,10 +12,12 @@ class ProgressoModel extends Model
     }
     public function obterRegistrosPonto($bolsistaId)
     {
-        $stmt = \MySql::connect()->prepare("SELECT data_registro, horario_entrada, horario_saida FROM registros_ponto WHERE bolsista_id = ?");
+        $stmt = \MySql::connect()->prepare("SELECT nome_bolsista, data_registro, horario_entrada, horario_saida FROM registros_ponto WHERE bolsista_id = ?");
         $stmt->execute([$bolsistaId]);
         return $stmt->fetchAll();
     }
+
+
     
     public function horasTrabalhadasPorDia($bolsistaId)
     {
@@ -24,6 +26,7 @@ class ProgressoModel extends Model
     $horasTrabalhadas = [];
 
     foreach ($registros as $registro) {
+        $nomeBolsista =  $registro['nome_bolsista'];
         $dataRegistro = date('Y-m-d', strtotime($registro['data_registro']));
         $horaEntrada = strtotime($registro['horario_entrada']);
         $horaSaida = strtotime($registro['horario_saida']);
@@ -33,6 +36,7 @@ class ProgressoModel extends Model
             $diferencaHoras = gmdate('H:i', $horaSaida - $horaEntrada); // Formata a diferença em horas e minutos
 
             $horasTrabalhadas[] = [
+                'nome_bolsista'  => $nomeBolsista,
                 'data_registro' => $dataRegistro,
                 'horario_entrada' => date('H:i:s', $horaEntrada),
                 'horario_saida' => date('H:i:s', $horaSaida),

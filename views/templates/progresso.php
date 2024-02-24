@@ -57,21 +57,26 @@ if (isset($_POST['bolsista'])) {
                     <th>Entrada</th>
                     <th>Saída</th>
                     <th>Horas Trabalhadas</th>
+                    <th>Nome do Bolsista</th> <!-- Adicione esta linha -->
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($horasTrabalhadas as $registro): ?>
                     <tr>
-                        <td><?php echo $registro['data_registro']; ?></td>
-                        <td><?php echo $registro['horario_entrada']; ?></td>
-                        <td><?php echo $registro['horario_saida']; ?></td>
-                        <td><?php echo isset($registro['horas_trabalhadas']) ? $registro['horas_trabalhadas'] : 'N/A'; ?></td>
-                    </tr>
+                    <td><?php echo $registro['data_registro']; ?></td>
+                    <td><?php echo $registro['horario_entrada']; ?></td>
+                    <td><?php echo $registro['horario_saida']; ?></td>
+                    <td><?php echo isset($registro['horas_trabalhadas']) ? $registro['horas_trabalhadas'] : 'N/A'; ?></td>
+                    <td><?php echo isset($registro['nome_bolsista']) ? $registro['nome_bolsista'] : 'N/A'; ?></td>
+                </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
         <?php else: ?>
-            <p>Nenhum registro de ponto disponível para o bolsista selecionado.</p>
+            <div class="no-records-message">
+                <p>Não há registros de ponto disponíveis para o bolsista selecionado no momento.</p>
+                <p>Se desejar, você pode registrar um ponto usando a opção "Registrar Ponto" no menu.</p>
+            </div>
         <?php endif; ?>
 
 
